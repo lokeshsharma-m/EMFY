@@ -1,0 +1,28 @@
+a {
+  font-size: x-large;
+  font-style: normal;
+}
+body {
+  background-image: url("homebg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+  
+}
+h1 {
+  color: black;
+  font-size: large;
+  padding: 10px;
+}
+table {
+  width: auto;
+}
+p{
+  padding: 10px;
+}
+#myhero {
+  color: black;
+  background-color: white;
+  opacity: .07;
+}

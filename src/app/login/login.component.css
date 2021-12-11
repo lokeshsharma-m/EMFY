@@ -1,0 +1,16 @@
+.hero
+{
+    height: auto;
+}
+.box
+{
+    width: 400px;
+    height: 400px;
+}
+body {
+    background-image: url("yrcbg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    }

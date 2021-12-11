@@ -1,0 +1,33 @@
+<body>
+    
+    
+    <h1 style="padding-bottom: 30px;text-align: center; font-weight: bold; color:black">
+        STUDENTS ENROLLED FOR YRC
+    </h1>
+    <div style="text-align:center">
+        <div class="table-container">
+       <table class="table  table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th scope="col"><abbr title="Serial number">S.no</abbr></th>
+                  <th scope="col"><abbr title="Name">Name</abbr></th>
+                  <th scope="col"><abbr title="Register number">Register no</abbr></th>
+                  <th scope="col"><abbr title="Department">Dept</abbr></th>
+                 <th scope="col"><abbr title="Phone Number">Phone Number</abbr></th>
+                  <th scope="col"><abbr title="Email">Email</abbr></th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Student of Registration; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{Student.fullName}}</td>
+                <td>{{Student.registerNumber}}</td>
+                <td>{{Student.department}}</td>
+                <td>{{Student.phoneNumber}}</td>
+                <td>{{Student.email}}</td>
+          </tbody>
+
+       </table>
+       </div>
+       </div>
+    </body>

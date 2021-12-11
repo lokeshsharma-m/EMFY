@@ -1,0 +1,67 @@
+
+     <body>
+      <app-header></app-header>
+      <section>
+      <nav class="navbar is-danger is-bold" id="mynav">
+        <div class="navbar-brand">
+            <img src="assets/ssn logo.png" width="112" height="28">
+          <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" routerLink="/studhome">
+              Home
+            </a>
+              <a class="navbar-item" routerLink='/deleteevent' >
+                events
+              </a>
+                <a class="navbar-item" routerLink="/seeatt">attendence</a>
+              </div>
+            </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+              <button class="button is-light" routerLink="/">Logout</button>
+          </div>
+          </div>
+      </nav>
+      </section>
+      <section class="hero is-bold">
+        <div class="hero-body">
+          <p class="title" style="text-align: center">
+           ATTENDANCE
+          </p>
+        </div>
+      </section>
+     <input type="registerNumber" name="registerNumber"  class="input" [(ngModel)]="attend.registerNumber" required>
+
+     
+
+  
+      <div style="text-align:center">
+          <div class="table-container">
+         <table class="table  table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col"><abbr title="Register number"></abbr>Register Number</th>
+                    <th scope="col"><abbr title="ATTENDANCE">NO OF HOURS COMPLETED</abbr></th>
+               </tr>
+            </thead>
+            <tbody>
+               
+                <tr *ngFor="let Student of Attendance ">
+                   
+               <td>{{Student.registerNumber}}</td> 
+                 <td> {{Student.Hours}}</td>
+                </tr>
+                </tbody>
+                </table>
+                <div class="container" style="align-items: center;">
+                   <!--<button class="button is-danger" (click)="Attended(attend)">ENTER</button>-->
+          <br>
+        </div>
+        </div><br><br>
+            

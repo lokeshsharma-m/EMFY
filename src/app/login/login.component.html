@@ -1,0 +1,54 @@
+<body>
+  <section class="hero is-danger is-bold">
+      <div class="hero-body">
+       
+        <p class="title is-size-1">
+          Youth Red Cross 
+        </p>
+        <p class="subtitle is-size-4">
+          Sivasubramaniyanadar college of Engineering,Chennai 603110
+        </p>
+      </div>
+    </section>
+    <br><br><br>
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <form class="box">
+                <div class="field">
+                  <label class="label">SSN email ID</label>
+                  <div class="control has-icons-left">
+                    <input type="email" name="email" placeholder="e.g. aaa@dept.ssn.edu.in" class="input"  [(ngModel)]="login.email" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    <input type="password" name="password" placeholder="*******" class="input" [(ngModel)]="login.password" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+              
+                <div class="container" align=center>
+                  <button class="button is-danger" (click)="Login(login)">Login</button>
+                  <br>
+                  <p > or </p>
+                 
+                 <a routerLink="/signup"><button class="button is-danger">signup</button></a>
+                 <div class="container" align=center>
+                  {{message}}
+                </div> 
+                </div>
+              
+              </form>
+            </div>
+          </div>
+        </div><br><br>
+
+       
+  </body>

@@ -1,0 +1,38 @@
+<html>
+<body>
+    
+    <section class="hero is-bold">
+        <div class="hero-body">
+          <p class="title" style="text-align: center">
+           MEMBER'S LIST
+          </p>
+        </div>
+      </section>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Register Number</th>
+                <th scope="col">Hours</th>
+                <th scope="col">Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attend of Attendance; let i=index">
+                <th scope="row">{{i+1}}</th>   
+                <td>{{attend.registerNumber}}</td> 
+                <td>{{attend.Hours}}</td>
+                <td>  
+                    <button><span routerLink="/update-attendance/{{attend.id}}">Edit</span></button>
+                </td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</body>
+</html>
+

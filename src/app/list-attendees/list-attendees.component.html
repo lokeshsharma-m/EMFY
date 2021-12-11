@@ -1,0 +1,34 @@
+<html>
+<body>
+    
+        <h2>LIST OF EVENTS</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Register Number</th>
+                <th scope="col">Hours</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Student of Attendance; let i=index">
+                   
+                <td>{{Student.registerNumber}}</td> 
+                  <td> {{Student.Hours}}</td>
+                
+                <td>
+                    
+                  
+                    <button><span routerLink="/update-attendance/{{Student.id}}">Edit</span></button>
+                    <!--<button class=" btn btn-danger" type="submit">Send mail</button>-->
+                </td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</body>
+</html>

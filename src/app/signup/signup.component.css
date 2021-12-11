@@ -1,0 +1,10 @@
+body {
+    background-image: url("yrcbg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    }
+    .center {
+        text-align: center;
+      }

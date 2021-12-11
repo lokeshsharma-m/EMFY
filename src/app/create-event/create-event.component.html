@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="create-event.component.css">
+  </head>
+
+
+<body>
+
+<!-- <ul>
+  <li><img src="C:\Users\Admin\Desktop\angular-tut\emfy\src\assets\cross (1) (1).jpg" ></li>
+  <li><a class="active" href="#home">HOME</a></li>
+  <li><a href="#EVENT">EVENT</a></li>
+  <li><a href="#ATTENDANCE">ATTENDANCE</a></li>
+  <li><a href="#EDIT EVENT">EDIT EVENT</a></li>
+</ul> -->
+<form class="w3-container w3-card-4 w3-light-grey" [formGroup]="eventForm" (ngSubmit)="onSubmit()" >
+  <h2>CREATE EVENT</h2>
+  
+  <div class="form-group">
+  <p><label>Name</label>
+  <input class="w3-input w3-border form-control" formControlName="name" type="text" ></p>
+  <span class="text-danger"
+  *ngIf="(eventFormControl.name.touched || submitted) && eventFormControl.name.errors?.required">
+   Name is required
+  </span>
+  </div>
+
+
+
+  <div class="form-group">
+  <p><label>DESCRIPTION</label>
+    </p>
+    <textarea formControlName="description" class="form-control" cols="165" rows="10"></textarea>
+    <span class="text-danger"
+  *ngIf="(eventFormControl.description.touched || submitted) && eventFormControl.description.errors?.required">
+   Description is required
+  </span>
+  </div>
+  
+  <div class="form-group">
+  <p><label>DURATION</label>
+  <input class="w3-input w3-border form-control" formControlName="duration" type="time"></p>
+  <span class="text-danger"
+  *ngIf="(eventFormControl.duration.touched || submitted) && eventFormControl.duration.errors?.required">
+   Duration is required
+  </span>
+  </div>
+
+  <div class="form-group">
+  <p><label>REGISTRATION DEADLINE</label>
+  <input class="w3-input w3-border form-control" formControlName="registrationDeadline" type="date"></p>
+  <span class="text-danger"
+  *ngIf="(eventFormControl.registrationDeadline.touched || submitted) && eventFormControl.registrationDeadline.errors?.required">
+   Registration Deadline is required
+  </span>
+  </div>
+
+  <div class="form-group">
+  <p><label>DATE</label>
+  <input class="w3-input w3-border form-control" formControlName="date" type="date"></p>
+  <span class="text-danger"
+  *ngIf="(eventFormControl.date.touched || submitted) && eventFormControl.date.errors?.required">
+   Date is required
+  </span>
+  </div>
+
+  <div class="form-group">
+  <p><label>VENUE</label>
+  <input class="w3-input w3-border form-control" formControlName="venue" type="text"></p>
+  <span class="text-danger"
+  *ngIf="(eventFormControl.venue.touched || submitted) && eventFormControl.venue.errors?.required">
+   Venue is required
+  </span>
+  </div>
+  <!--<input type="button" value="CREATE" >-->
+  <button class="button button1" type="submit" [disabled]="!eventForm.valid" >CREATE</button>
+  <button class="button button1" type="reset">CLEAR</button>
+</form>
+
+</body>
+</html>

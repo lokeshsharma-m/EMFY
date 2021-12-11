@@ -1,0 +1,17 @@
+<form [formGroup]="eForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label>Register Number</label>
+        <input type="text" formControlName="registerNumber" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Hours</label>
+            <input type="text" formControlName="Hours" class="form-control"required>
+
+        </div>
+        <div class="mb-3">
+            <button type ="submit" class="btn btn-primary">Update</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+    
+</form>

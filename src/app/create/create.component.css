@@ -1,0 +1,42 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(241, 8, 8, 0.842);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 40px 40px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(8, 8, 8);
+}
+.pos {
+  position: absolutde;
+}
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 700px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #f44336;
+} /* Red */

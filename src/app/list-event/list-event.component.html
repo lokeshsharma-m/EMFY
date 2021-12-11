@@ -1,0 +1,82 @@
+<body>
+     <nav class="navbar is-danger is-bold" id="mynav">
+    <!-- <div class="navbar-brand">
+            <img src="assets/ssn logo.png" width="112" height="28">
+          <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" routerLink="/adminhomepage">
+              Home
+            </a>
+              <a class="navbar-item" routerLink='/list-event' >
+                Events
+              </a>
+                <a class="navbar-item" routerLink="/attendence">Attendance</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    admin controls
+                  </a>
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item is-hoverable">
+                      view yrc members' list
+                    </a>
+                    <a class="navbar-item is-hoverable" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=ashwinirameshrocks@gmail.com&su= &body= &bcc=charithakapireddy31@gmail.com">
+                      send common mail
+                    </a>
+                </div>
+              </div>
+    
+            </div>
+            
+          </div> -->
+        <div class="navbar-end">
+            <div class="navbar-item">
+              <button class="button is-light" routerLink="/">Logout</button>
+          </div>
+          </div>
+          
+      </nav>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Event name</th>
+                <th scope="col">EventID</th>
+                <th scope="col">Description</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Registrationdeadline</th>
+                <th scope="col">Date</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let event of Event; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{event.name}}</td>
+                <td>{{event.id}}</td>
+                <td>{{event.description}}</td>
+                <td>{{event.duration}}</td>
+                <td>{{event.registrationDeadline}}</td>
+                <td>{{event.date}}</td>
+                <td>{{event.venue}}</td>
+                <td>
+                    <span (click)="removeEvent(event)" class="btn btn-danger">Delete</span>&nbsp;
+                    <button><span routerLink="/delete-event/{{event.id}}">Edit</span></button>
+                    <button class=" btn btn-danger" type="submit" onclick="window.location.href= 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=ashwinirameshrocks@gmail.com&su=&body=&bcc=yrcemfy@gmail.com+ashwini19016@it.ssn.edu.in+ashwinir765@gmail.com'">Send mail</button>
+                </td>
+                
+            </tr>
+
+        </tbody>
+        <button class="btn btn-danger" [routerLink]="['/create-event']">CREATE</button>
+
+    </table>
+    
+</body>

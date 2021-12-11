@@ -1,0 +1,31 @@
+<html>
+<body>
+    <form class="w3-container w3-card-4 w3-light-grey"[formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <h2>LIST OF EVENTS</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Register Number</th>
+                <th scope="col">Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of Attendance; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{event.registerNumber}}</td>
+                <td>{{event.Hours}}</td>
+                    
+                   <button class=' button button1' type="submit">REGISTER</button>
+                    <!--<button><span routerLink="/delete-event/{{event.id}}">Edit</span></button>
+                    <button class=" btn btn-danger" type="submit">Send mail</button>-->
+                
+                
+            </tr>
+
+        </tbody>
+    </table>
+
+</form>
+</body>
+</html>

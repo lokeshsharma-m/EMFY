@@ -1,0 +1,45 @@
+a {
+  font-size: x-large;
+  font-style: normal;
+}
+body {
+  background-image: url("homebg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+#myhero {
+}
+
+#first {
+  height: 600px;
+  padding: 50px;
+  margin: 20px 200px 20px 200px;
+  background-color: #ffdab9;
+}
+
+#second {
+  width: 500px;
+  height: 300px;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid black;
+}
